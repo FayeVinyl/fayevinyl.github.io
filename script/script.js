@@ -1,4 +1,4 @@
-/* add class navbarDark on navbar scroll
+/* add class navbarDark on navbar scroll */
 const header = document.querySelector('.navbar');
 
 window.onscroll = function() {
