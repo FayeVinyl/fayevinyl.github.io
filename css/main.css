@@ -252,6 +252,13 @@ footer {
   background-color: var(--main-ltpink);
 }
 
+#projects .portfolio-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-flow: row wrap;
+}
+
 .portfolio-project {
   padding: 20px 0;
 }
@@ -419,11 +426,11 @@ footer ul {
       padding-top: 120px;
     }
     #projects .portfolio-wrapper {
-      display: flex;
-      flex-flow: row wrap;
       justify-content: space-around;
       padding: 40px 0;
     }
+
+
 
     .portfolio-project {
       max-width: 48%;
