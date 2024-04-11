@@ -93,9 +93,6 @@
   --highlight-green: #7fdaad;
 }
 
-html {
-  font-size: 1rem;
-}
 
 body {
   font-size: 1em;
@@ -115,8 +112,13 @@ a {
   font-size: .75em;
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
-  text-transform: uppercase;
   color: var(--main-ltpink);
+}
+
+nav li,
+.project-live-link,
+.project-github-repo {
+  text-transform: uppercase;
 }
 
 .contact-link{
@@ -234,6 +236,7 @@ footer {
   text-align: center;
  }
 
+
  /* -------------------- Base Main Content Styles -------------------- */
 
 #projects,
@@ -256,7 +259,7 @@ footer {
 #projects .portfolio-wrapper {
   display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: flex-start;
   flex-flow: row wrap;
 }
 
@@ -387,237 +390,6 @@ footer ul {
 
 /*------------- Media Queries ----------------------*/
 
-  /*------------ Tablet ----------*/
-
-  @media only screen and (min-width: 768px) {
-
-    h1 {
-      font-size: 2.5em;
-    }
-
-    h2,
-    h3 {
-      font-size: 2em;
-    }
-
-    h4 {
-      font-size: 1.25em;
-    }
-
-    a {
-      font-size: 1em;
-    }
-
-    header {
-      padding: 80px 0;
-    }
-
-
-    .intro-section h1 {
-      padding: 80px 0;
-      text-align: center;
-    }
-
-    .intro-section h2 {
-      text-align: center;
-      max-width: 75%;
-    }
-
-    #projects {
-      padding-top: 120px;
-    }
-    #projects .portfolio-wrapper {
-      justify-content: space-around;
-      padding: 40px 0;
-    }
-
-
-
-    .portfolio-project {
-      max-width: 48%;
-      padding: 40px 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-    #skills {
-      padding: 0 0 120px 0;
-    }
-
-    #skills h3 {
-      padding: 0;
-    }
-
-    #skills h4 {
-      padding: 40px 0 30px 0;
-    }
-
-    .skills-wrapper {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-evenly;
-    }
-
-    .skills-wrapper li {
-      width: 45%;
-    }
-
-    #about {
-      padding: 120px 0;
-    }
-
-    #profile-img {
-      width: 50%;
-    }
-
-    #about h3 {
-      padding: 80px 0;
-    }
-
-    #about h4 {
-      padding-bottom: 60px;
-    }
-
-    #contact {
-      padding-top: 120px;
-    }
-
-    #contact h3 {
-      padding-bottom: 80px;
-    }
-
-    .contact-wrapper {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-
-    #contact h4 {
-      padding: 0 0 30px 0;
-    }
-
-    #contact .copyright {
-      padding: 80px 0 80px  0;
-    }
-
-  }
-
-  /*------------ Desktop ----------*/
-
-  @media only screen and (min-width: 1200px) {
-
-    .content-wrapper {
-      max-width: 1200px;
-    }
-
-    h1 {
-      font-size: 4em;
-    }
-
-    h2,
-    h3 {
-      font-size: 2.5em;
-    }
-
-    h4 {
-      font-size: 2em;
-    }
-
-    a {
-      padding: 10px;
-
-    }
-
-
-    header nav ul {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      text-align: center;
-    }
-
-    nav ul li a {
-      padding: 10px 10px;
-    }
-
-
-    nav ul li a:hover,
-    nav #contact-link:hover {
-      background-color: var(--hover-red);
-      padding: 10px 10px;
-      border-radius: 30px;
-    }
-
-    header {
-      padding-bottom: 140px;
-    }
-
-    .intro-section h1 {
-      padding-bottom: 40px;
-    }
-
-    #projects {
-      padding-top: 140px;
-    }
-
-    #projects .portfolio-wrapper {
-      padding: 0;
-    }
-
-    .portfolio-project {
-      padding: 80px 0 40px 0;
-      max-width: 30%;
-    }
-
-    #skills {
-      padding: 80px 0 140px 0;
-    }
-
-    .skills-wrapper li {
-      width: 30%;
-    }
-
-    #about {
-      padding: 140px 0 160px 0;
-    }
-
-    #about .content-wrapper {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    #about figure {
-      width: 90%;
-      margin-top: 0;
-    }
-
-    #profile-img {
-      width: 70%;
-    }
-
-    #about .info-wrapper {
-      width: 100%;
-    }
-
-    #about h3 {
-      padding: 0;
-      text-align: left;
-    }
-
-    #about h4 {
-      padding: 40px 0 40px 0;
-      text-align: left;
-    }
-
-    #contact {
-      padding: 160px 0 140px 0;
-    }
-
-    #contact .copyright {
-      padding: 40px 0 0 0;
-    }
-
-  }
 
   /* ==========================================================================
      Helper classes
@@ -701,10 +473,244 @@ footer ul {
      These examples override the primary ('mobile first') styles.
      Modify as content requires.
      ========================================================================== */
+
+    @media (prefers-reduced-motion: no-preference) {
+      html {
+        scroll-behavior: smooth;
+      }
+    }
+
+    /*------------ Tablet ----------*/
+
+    @media only screen and (min-width: 768px) {
+
+      h1 {
+        font-size: 2.5em;
+      }
   
-  @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-  }
+      h2,
+      h3 {
+        font-size: 2em;
+      }
+  
+      h4 {
+        font-size: 1.25em;
+      }
+  
+      a {
+        font-size: 1em;
+      }
+  
+      header {
+        padding: 80px 0;
+      }
+  
+  
+      .intro-section h1 {
+        padding: 80px 0;
+        text-align: center;
+      }
+  
+      .intro-section h2 {
+        text-align: center;
+        max-width: 75%;
+      }
+  
+      #projects {
+        padding-top: 120px;
+      }
+      #projects .portfolio-wrapper {
+        justify-content: space-around;
+        padding: 40px 0;
+      }
+  
+  
+  
+      .portfolio-project {
+        max-width: 48%;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      #skills {
+        padding: 0 0 120px 0;
+      }
+  
+      #skills h3 {
+        padding: 0;
+      }
+  
+      #skills h4 {
+        padding: 40px 0 30px 0;
+      }
+  
+      .skills-wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+      }
+  
+      .skills-wrapper li {
+        width: 45%;
+      }
+  
+      #about {
+        padding: 120px 0;
+      }
+  
+      #profile-img {
+        width: 50%;
+      }
+  
+      #about h3 {
+        padding: 80px 0;
+      }
+  
+      #about h4 {
+        padding-bottom: 60px;
+      }
+  
+      #contact {
+        padding-top: 120px;
+      }
+  
+      #contact h3 {
+        padding-bottom: 80px;
+      }
+  
+      .contact-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+  
+      #contact h4 {
+        padding: 0 0 30px 0;
+      }
+  
+      #contact .copyright {
+        padding: 80px 0 80px  0;
+      }
+  
+    }
+  
+    /*------------ Desktop ----------*/
+  
+    @media only screen and (min-width: 1200px) {
+  
+      .content-wrapper {
+        max-width: 1200px;
+      }
+  
+      h1 {
+        font-size: 4em;
+      }
+  
+      h2,
+      h3 {
+        font-size: 2.5em;
+      }
+  
+      h4 {
+        font-size: 2em;
+      }
+  
+      a {
+        padding: 10px;
+  
+      }
+  
+  
+      header nav ul {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+      }
+  
+      nav ul li a {
+        padding: 10px 10px;
+      }
+  
+  
+      nav ul li a:hover,
+      nav #contact-link:hover {
+        background-color: var(--hover-red);
+        padding: 10px 10px;
+        border-radius: 30px;
+      }
+  
+      header {
+        padding-bottom: 140px;
+      }
+  
+      .intro-section h1 {
+        padding-bottom: 40px;
+      }
+  
+      #projects {
+        padding-top: 140px;
+      }
+  
+      #projects .portfolio-wrapper {
+        padding: 0;
+      }
+  
+      .portfolio-project {
+        padding: 80px 0 40px 0;
+        max-width: 30%;
+      }
+  
+      #skills {
+        padding: 80px 0 140px 0;
+      }
+  
+      .skills-wrapper li {
+        width: 30%;
+      }
+  
+      #about {
+        padding: 140px 0 160px 0;
+      }
+  
+      #about .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+  
+      #about figure {
+        width: 90%;
+        margin-top: 0;
+      }
+  
+      #profile-img {
+        width: 70%;
+      }
+  
+      #about .info-wrapper {
+        width: 100%;
+      }
+  
+      #about h3 {
+        padding: 0;
+        text-align: left;
+      }
+  
+      #about h4 {
+        padding: 40px 0 40px 0;
+        text-align: left;
+      }
+  
+      #contact {
+        padding: 160px 0 140px 0;
+      }
+  
+      #contact .copyright {
+        padding: 40px 0 0 0;
+      }
+  
+    }
   
   @media print,
     (-webkit-min-device-pixel-ratio: 1.25),
