@@ -93,7 +93,6 @@
   --highlight-green: #7fdaad;
 }
 
-
 body {
   font-size: 1em;
   font-family: "Open Sans", sans-serif;
@@ -256,6 +255,11 @@ h2 {
 }
 
 .portfolio-project {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 20px 0;
 }
 
@@ -276,22 +280,20 @@ h2 {
   text-align: left;
 }
 
-.project-skills {
-  padding-bottom: 40px;
-  text-align: left;
+.flex-fill {
+  flex-grow: 1;
 }
 
-.project-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.project-live-link {
+  margin-top: 40px;
+
 }
 
 .project-live-link,
 .project-github-repo {
   background-color: var(--main-red);
-  padding: .75em 2.5em;
   width: 60%;
+  padding: .75em 0;
   border-radius: 30px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -609,7 +611,6 @@ footer ul {
       h4 {
         font-size: 2em;
       }
-
   
       header nav ul {
         display: flex;
